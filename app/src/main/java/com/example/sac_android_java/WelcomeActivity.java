@@ -39,7 +39,7 @@ public class WelcomeActivity extends AppCompatActivity {
         // Checking for first time launch - before calling setContentView()
         prefManager = new PrefManager(this);  //Created the object to use it from PrefManager.java
         if (!prefManager.isFirstTimeLaunch()) {
-            launchHomeScreen();
+            launchLoginScreen();
             finish();
         }
 
@@ -79,7 +79,7 @@ public class WelcomeActivity extends AppCompatActivity {
         btnSkip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                launchHomeScreen();
+                launchLoginScreen();
             }
         });
 
@@ -93,7 +93,7 @@ public class WelcomeActivity extends AppCompatActivity {
                     // move to next screen
                     viewPager.setCurrentItem(current);
                 } else {
-                    launchHomeScreen();
+                    launchLoginScreen();
                 }
             }
         });
@@ -119,7 +119,7 @@ public class WelcomeActivity extends AppCompatActivity {
             dots[currentPage].setTextColor(colorsActive[currentPage]);
     }
 
-    private void launchHomeScreen() {
+    private void launchLoginScreen() {
         prefManager.setFirstTimeLaunch(false);
         startActivity(new Intent(WelcomeActivity.this, LoginActivity.class));
         finish();
