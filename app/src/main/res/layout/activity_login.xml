@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/login_rel_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- IIT Mandi Logo -->
+    <LinearLayout
+        android:id="@+id/loginLogoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:background="@drawable/iit_logo3"
+        android:orientation="horizontal" />
+    <!-- Logo End -->
+
+    <!-- Heading -->
+    <TextView
+        android:id="@+id/loginHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/loginHeading"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/loginLogoLayout"
+        android:layout_margin="32dp"
+        android:textSize="48dp"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+        android:paddingTop="16dp"/>
+    <!-- Heading End -->
+
+    <!-- Login Form -->
+    <EditText
+        android:id="@+id/et_username"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="@string/prompt_username"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:padding="16dp"
+        android:inputType="textEmailAddress"
+        android:layout_below="@+id/loginHeading"
+        android:background="@drawable/et_custom"
+        android:textSize="15sp"
+        android:autofillHints="" />
+        <!-- Set the autofill hints as suggested by studio -->
+
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/et_username"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/et_custom"
+        android:hint="@string/prompt_password"
+        android:inputType="textPassword"
+        android:padding="16dp"
+        android:textSize="15sp"
+        android:autofillHints="" />
+
+    <ImageView
+        android:id="@+id/show_password"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/et_username"
+        android:layout_marginTop="28dp"
+        android:layout_alignEnd="@+id/et_password"
+        android:foregroundGravity="right"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/ic_eye"
+        android:contentDescription="@string/show_password" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_password"
+        android:background="@drawable/btn_custom"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/white"
+        android:text="@string/action_sign_in_short"/>
+    <!-- End of Login Form -->
+
+    <!-- Forgot Password -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="8dp"
+        android:layout_below="@+id/btn_login"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/forgot_password"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:padding="4dp"
+            android:text="@string/forgot_password"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/help_sign_in"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="start"
+            android:padding="4dp"
+            android:text="@string/get_sign_in_help"
+            android:textColor="@color/login_button_color"
+            android:textSize="15sp" />
+    </LinearLayout>
+    <!-- End of Forgot Password -->
+
+    <!-- Register -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/new_user_text"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:gravity="end"
+            android:text="@string/new_user"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:id="@+id/register_text"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:text="@string/register_here"
+            android:textColor="@color/login_button_color"
+            android:gravity="start"
+            android:textSize="13sp"/>
+
+    </LinearLayout>
+    <!-- End of Register Form -->
+
+</RelativeLayout>

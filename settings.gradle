@@ -1,0 +1,2 @@
+rootProject.name='sac-android-java'
+include ':app'
