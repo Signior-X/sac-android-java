@@ -110,12 +110,19 @@ public class PrefManager {
     /**
      *
      */
+
+    public void LogoutUser(){
+        editor.clear();  //Clear the data stored in the shared preferences
+        setFirstTimeLaunch(false);   //The WelcomeActivity to not be called everrytimme, so let it store in the data
+        editor.commit();
+    }
+
+    /*  Commented this as this was having problem.
+
     public void logoutUser(){
         //Clearing all data from shared prefernces
         editor.clear();
         editor.commit();
-
-        /* Code which can be used to start a new activity using intent */
 
         // After logout redirect user to Loing Activity
         Intent i = new Intent(_context, LoginActivity.class);
@@ -128,6 +135,11 @@ public class PrefManager {
         // Staring Login Activity
         _context.startActivity(i);
     }
+
+    */
+
+
+
     /**
      * Function to set the key IS_FIRST_TIME_LAUNCH as passed in the function
      * @param isFirstTime - To set the key IS_FIRST_TIME_LAUNCH

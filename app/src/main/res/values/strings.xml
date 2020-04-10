@@ -38,4 +38,5 @@
     <string name="forgot_password">Forgot Password?</string>
     <string name="get_sign_in_help">Get Help Signing in.</string>
 
+    <string name="logout">Logout</string>
 </resources>
