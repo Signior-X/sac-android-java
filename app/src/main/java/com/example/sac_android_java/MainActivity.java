@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     Button logoutButton;
     String sessionUsername, sessionPassword;
     TextView session_username, session_password;
+    Button httpRequestButton;
 
     // PrefManager for handling the sessions
     PrefManager session;
@@ -51,6 +52,14 @@ public class MainActivity extends AppCompatActivity {
                 session.LogoutUser();  // Logging Out User
                 startActivity(new Intent(MainActivity.this, LoginActivity.class));
                 finish();
+            }
+        });
+
+        httpRequestButton = (Button) findViewById(R.id.activity_main_button_request);
+        httpRequestButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, HttpRequest.class));
             }
         });
     }
